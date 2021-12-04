@@ -19,7 +19,7 @@ osd_scrub_max_interval= 604800
 
 osd_scrub_min_interval =  172800 ** Changed to 14 days
 
-# To set via orchest
+## To set via orchest
 example
 ceph config set osd osd_scrub_max_interval 604800
 
