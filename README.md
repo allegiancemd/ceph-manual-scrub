@@ -1,7 +1,7 @@
 ## Configurations
 We run a large ceph cluster, Ceph cluster falls behind deep scrubbing PGS on regular basis.
 
-The idea is to run a cron script that orders the cluster to manual scrub PGS that fell behind, once caught up, go back 10 days and try to proactively scrub PGS 10 days or older (TIMELIMIT defaults to 10 days). We also set osd_deep_scrub_randomize_ratio = 0 to prevent the cluster to go back and scrub random PGS that aren't due and focus on the PGS that are falling behind or about to fall behind.
+The idea is to run a cron script that orders the cluster to manual scrub PGS that fall behind, once caught up, go back 10 days and try to proactively scrub PGS 10 days or older (TIMELIMIT defaults to 10 days). We also set osd_deep_scrub_randomize_ratio = 0 to prevent the cluster to go back and scrub random PGS that aren't due and focus on the PGS that are falling behind or about to fall behind.
 
 To overcome this problem, We had to change the following parameters
 
